@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-import twitter
+import twitter.api
 
 from twitter.oauth import write_token_file, read_token_file
 from twitter.oauth_dance import oauth_dance

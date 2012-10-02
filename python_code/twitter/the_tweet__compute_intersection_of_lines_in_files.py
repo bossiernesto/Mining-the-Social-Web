@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+import tweepy.utils
+
+import twitter
+
 """
 Read in 2 or more files and compute the logical intersection of the lines in them
 """
