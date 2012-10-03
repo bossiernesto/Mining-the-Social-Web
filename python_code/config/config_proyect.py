@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-__author__ = 'ernesto'
-=======
 import ConfigParser,io
 
 
 DEFAULT_NAME='SETTINGS.conf'
 DEFAULT_FILENAME='./'.join(DEFAULT_NAME)
 
-
-setting_template=[]
+#TODO: sanitize entries from config file and complete settting_template with default values
+setting_template=[('NoSQL',[('COUCH_DB_NAME','')]),
+                ('General',[('SHOW_DEBUG_INFO',0)])]
 
 class settingBuilder():
     """Simple wrapper for the ConfigParser module used in this """
@@ -20,7 +18,10 @@ class settingBuilder():
         for section in setting_template:
             self.config_parser.add_section(section[0])
             for value in  section[1]:
-                self.config_parser.set(section[0],)
+                self.config_parser.set(section[0],value[0],value[1])
+        if save:
+            with open(DEFAULT_FILENAME,'wb') as file:
+                self.config_parser.write(file)
 
     def get_settings(self,filename=DEFAULT_FILENAME,flow=False):
         if flow:
@@ -46,4 +47,3 @@ class settingBuilder():
 class ConfigError(Exception):
     pass
 
->>>>>>> 094543a9598238fd130ed326e7c9237d4f3ad463

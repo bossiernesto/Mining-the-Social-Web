@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-__author__ = 'ernesto'
-=======
 import couchdb
 from base_nosql import *
 
@@ -39,4 +36,3 @@ class Session(BaseNosqlSession):
 
 
 couch_session = Session()
->>>>>>> 094543a9598238fd130ed326e7c9237d4f3ad463

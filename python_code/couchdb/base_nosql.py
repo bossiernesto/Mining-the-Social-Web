@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-__author__ = 'ernesto'
-=======
 class NosqlEntity(object):
     """
         Base of NosqlEntities like MongoEntity or CouchEntity
@@ -19,4 +16,3 @@ class BaseNosqlSession(object):
 
         self.settings = settings
         self.db_host = getattr(settings, storage_name)
->>>>>>> 094543a9598238fd130ed326e7c9237d4f3ad463
