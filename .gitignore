@@ -1,3 +1,6 @@
+# out folder inside python_code
+python_code/out
+
 *.py[cod]
 
 # C extensions
